@@ -23,13 +23,21 @@ app.get('/', (req,res) => {
 })
 
 
+// GET request for notes
+app.get('/api/notes', (req, res) => {
+  // Send a message to the client
+  res.json(`${req.method} request received to get notes`);
+  // Log our request to the terminal
+  console.info(`${req.method} request received to get notes`);
+});
+
 //create new note function
 
 
 
 
 
-//delete note function 
+//create delete note function 
 
 
 
