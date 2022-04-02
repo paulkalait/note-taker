@@ -27,7 +27,7 @@ app.get('/api/notes', (req, res) => {
   // get db json data
 
   //display the db/db.json data
-  const results = fs.readFileSync(__dirname, "./db/db.json", "utf-8" )
+  const results = fs.readFileSync(path.join(__dirname,"./db/db.json"), "utf-8" )
   console.log(typeof results)
 
   res.json(JSON.parse(results))
@@ -47,7 +47,7 @@ app.post('/api/notes', (req,res) => {
   }
 
   //an array 
-  const noteData = JSON.parse(fs.readFileSync(__dirname,"./db/db.json" , "utf-8"))
+  const noteData = JSON.parse(fs.readFileSync(path.join(__dirname, "./db/db.json"), "utf-8"))
 
   //push new notes in the array
   noteData.push(newNotes)
@@ -69,7 +69,7 @@ app.post('/api/notes', (req,res) => {
 app.delete('/api/notes/:id', (req,res) =>{
 console.log(req.params.id)
 
-  const newNoteData = JSON.parse(fs.readFileSync(__dirname, "./db/db.json" , "utf-8"))
+  const newNoteData = JSON.parse(fs.readFileSync(path.join(__dirname, "./db/db.json"), "utf-8"))
   console.log(newNoteData)
   for(let i = 0; i < newNoteData.length; i++){
     if(newNoteData[i].id === req.params.id){
