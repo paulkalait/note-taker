@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 //a middleware that drills in and allows access for style sheet and htmls
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 
 
