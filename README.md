@@ -26,9 +26,9 @@
   The project came with a starter code. The only files that were created by the user were the server.js file, and the content inside the helpers folder
 
   ## Tests
-  node server to start server, then Ctr C to end server. Afte you start the file, copy and paste the link bellow:
-
-    ![Screenshot](img/terminal.png)
+  node server to start server, then Ctr C to end server. After you start the file, copy and paste the link bellow to start the application locally:
+    
+    http://localhost:3001
     
     
 
